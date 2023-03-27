@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+
+    <header>
+        <form name="searchBar">
+            <input type="text" name="searchInput" placeholder="Write movie name">
+            <input type="button" name="seachButton" value="search" onclick="searchMovie()">
+        </form>
+    </header>
+
+    <main></main>
+
+    <div class="modal" onclick="showModal()">
+        <div class="movieInfo">
+            <img class="poster"></img>
+            <div class="text">
+                <div class="text__title"></div>
+                <div class="text__type"></div>
+                <div class="text__description"></div>
+                <div class="text__writenBy"></div>
+                <div class="text__directedBy"></div>
+                <div class="text__starring"></div>
+                <div class="text__boxOffice"></div>
+                <div class="text__awards"></div>
+                <div class="text__ratings"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

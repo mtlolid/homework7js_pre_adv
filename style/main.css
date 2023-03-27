@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 95vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0 auto;
+}
+header form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  height: 60%;
+}
+header form input {
+  width: 40%;
+  height: 100%;
+}
+header form input[type=text] {
+  padding-left: 5px;
+}
+header form input[type=button] {
+  background-color: #28A743;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+main {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3%;
+  margin: 0 auto;
+}
+main .movie {
+  width: 22%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+main .movie__pic {
+  width: 100%;
+  height: 60%;
+  text-align: center;
+}
+main .movie__name {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: #D5D3CC;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+main .movie__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100%;
+  height: 15%;
+}
+main .movie__details {
+  width: 100%;
+  height: 8%;
+  background-color: #28A744;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .movieInfo {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: white;
+  border-radius: 3px;
+}
+.modal .movieInfo .poster {
+  width: 28%;
+  height: 90%;
+  margin-right: 10px;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.modal .movieInfo .text {
+  width: 65%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+  text-align: left;
+  border-right: 1px solid gray;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.modal .movieInfo .text__title {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #D5D3CC;
+  text-align: center;
+}
+.modal .movieInfo .text__type {
+  color: #D5D3CC;
+  font-size: 0.8rem;
+  margin: 10px 0px 10px 0px;
+}
+.modal .movieInfo .text__description, .modal .movieInfo .text__writenBy, .modal .movieInfo .text__directedBy, .modal .movieInfo .text__starring, .modal .movieInfo .text__boxOffice, .modal .movieInfo .text__awards {
+  margin-bottom: 10px;
+}
+
+.noScroll {
+  overflow-y: hidden;
+}
+
+.show {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}/*# sourceMappingURL=main.css.map */

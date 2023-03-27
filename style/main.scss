@@ -1,0 +1,164 @@
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin flex($fd, $jc, $ai, $fw, $g) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;
+    gap: $g;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    @include size(95vw, 50px);
+    @include flex(row, center, center, wrap, 0);
+    margin: 0 auto;
+
+    form {
+        @include flex(row, center, center, wrap, 10px);
+        @include size(100%, 60%);
+
+        input {
+            @include size(40%, 100%);
+        }
+
+        input[type="text"] {
+            padding-left: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #28A743;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+}
+
+main {
+    @include size(80vw, auto);
+    @include flex(row, flex-start, flex-start, wrap, 3%);
+    margin: 0 auto;
+
+    .movie {
+        @include size(22%, 85vh);
+        @include flex(column, flex-start, center, nowrap, 0);
+        margin-top: 10px;
+        border: 1px solid gray;
+        border-radius: 3px;
+
+        &__pic {
+            @include size(100%, 60%);
+            text-align: center
+        }
+
+        &__name {
+            @include size(100%, 15%);
+            @include flex(column, center, center, nowrap, 0);
+            background-color: #D5D3CC;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        &__info {
+            @include flex(column, space-evenly, center, nowrap, 0);
+            @include size(100%, 15%);
+        }
+
+        &__details {
+            @include size(100%, 8%);
+            background-color: #28A744;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+}
+
+.modal {
+    @include size(100%, 100vh);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .movieInfo {
+        @include size(80%, 90%);
+        @include flex(row, center, center, nowrap, 0);
+
+        background-color: white;
+        border-radius: 3px;
+
+        .poster {
+            @include size(28%, 90%);
+            margin-right: 10px;
+
+            border: {
+                left: 1px solid gray;
+                top: 1px solid gray;
+                bottom: 1px solid gray;
+            }
+
+        }
+
+        .text {
+            @include size(65%, 90%);
+            @include flex(column, flex-start, flex-start, nowrap, 0);
+            text-align: left;
+
+            border: {
+                right: 1px solid gray;
+                top: 1px solid gray;
+                bottom: 1px solid gray;
+            }
+
+            &__title {
+                @include size(100%, auto);
+                padding: 10px;
+                font-weight: bold;
+                background-color: #D5D3CC;
+                text-align: center;
+            }
+
+            &__type {
+                color: #D5D3CC;
+                font-size: .8rem;
+                margin: 10px 0px 10px 0px;
+            }
+
+            &__description,
+            &__writenBy,
+            &__directedBy,
+            &__starring,
+            &__boxOffice,
+            &__awards {
+                margin-bottom: 10px;
+            }
+
+        }
+
+    }
+}
+
+.noScroll{
+    overflow-y: hidden;
+}
+
+.show{
+    @include flex(row, center, center, nowrap, 0);
+}
